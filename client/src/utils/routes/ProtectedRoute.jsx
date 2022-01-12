@@ -15,14 +15,7 @@ const ProtectedRoute = ({ component, path, exact, strict, redirects }) => {
                     (user === null && !redirects.loggedIn[0]) ||
                     redirects.verified[0] !==
                         (user !== null && user.verified) ? (
-                        !redirects.riddles ||
-                        (user === null && !redirects.loggedIn[0]) ||
-                        redirects.riddles[0] !==
-                            (user !== null && user.riddles.length !== 0) ? (
-                            component
-                        ) : (
-                            <Redirect to={redirects.riddles[1]} />
-                        )
+                        component
                     ) : (
                         <Redirect to={redirects.verified[1]} />
                     )

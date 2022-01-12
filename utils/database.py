@@ -59,7 +59,6 @@ async def create_user(email: str, hashed_password: str):
     data = {
         "email": email,
         "password": hashed_password,
-        "riddles": [],
         "verified": False,
     }
 

@@ -27,7 +27,5 @@ COPY ./utils ./utils
 COPY ./routes ./routes
 COPY config.py config.py
 COPY main.py main.py
-COPY riddles.json riddles.json
-COPY whitelist.json whitelist.json
 
 CMD [ "sh", "-c", "uvicorn main:app --host=0.0.0.0 --port=${PORT:-5000}"]
