@@ -1,0 +1,15 @@
+import os
+
+# jwt
+ALGORITHM = "HS256"
+AT_EXPIRE_TIME = 4320  # minutes
+SECRET = os.environ["SECRET"]
+
+# database
+DATABASE_URI = os.environ["DATABASE_URI"]
+DATABASE_NAME = os.environ["DATABASE_NAME"]
+
+# Twilio
+TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
+TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
+TWILIO_VERIFY_SERVICE = os.environ["TWILIO_VERIFY_SERVICE"]

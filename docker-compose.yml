@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+    server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        env_file:
+            - .env
+        environment:
+            - PORT=2000
+        ports:
+            - "2000:2000"
